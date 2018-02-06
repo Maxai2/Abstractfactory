@@ -12,7 +12,12 @@ namespace AbstractFactory
 
         public void MealsHerbivores(Herbivore herbivore)
         {
-            AnimalWorldFactory.creatHerbivore() = herbivore.EatGrass();
+            AnimalWorldFactory.creatHerbivore();
+        }
+
+        public void NutritonCarnivores(Carnivore carnivore)
+        {
+            AnimalWorldFactory.creatHerbivore();
         }
     }
 }
