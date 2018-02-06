@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 //-----------------------------------------------------
 namespace Builder
 {
-    class Program
+    class Vehicle
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
 //-----------------------------------------------------
