@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 //----------------------------------------------------
 namespace AbstractFactory
 {
-    class Lion : Carnivore
+    class Eurasia : IContinent
     {
+        public Carnivore creatCarnivore()
+        {
+            return new Tiger();
+        }
+
+        public Herbivore creatHerbivore()
+        {
+            return new Elk();
+        }
     }
 }
 //----------------------------------------------------

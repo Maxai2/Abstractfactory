@@ -8,7 +8,6 @@ namespace AbstractFactory
 {
     class Wolf : Carnivore
     {
-         
     }
 }
 //----------------------------------------------------

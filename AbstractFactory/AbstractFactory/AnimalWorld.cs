@@ -10,14 +10,24 @@ namespace AbstractFactory
     {
         public IContinent AnimalWorldFactory { get; set; }
 
-        public void MealsHerbivores(Herbivore herbivore)
+        public Herbivore CreatHerbivores()
         {
-            AnimalWorldFactory.creatHerbivore();
+            return AnimalWorldFactory.creatHerbivore();
         }
 
-        public void NutritonCarnivores(Carnivore carnivore)
+        public Carnivore CreatCarnivores()
         {
-            AnimalWorldFactory.creatHerbivore();
+            return AnimalWorldFactory.creatCarnivore();
+        }
+
+        public void MealsHerbivores(Herbivore herbivore)
+        {
+            herbivore.EatGrass();
+        }
+
+        public void NutritionCarnivores(Carnivore carnivore, Herbivore herbivore)
+        {
+            carnivore.Eat(herbivore);
         }
     }
 }

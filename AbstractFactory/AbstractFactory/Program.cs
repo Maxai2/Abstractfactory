@@ -10,9 +10,11 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
-            AnimalWorld animalWorld = new AnimalWorld();
+            AnimalWorld AfricaWorld = new AnimalWorld();
+            AfricaWorld.AnimalWorldFactory = new Africa();
 
-            //animalWorld.MealsHerbivores();
+            Herbivore herbivore = AfricaWorld.CreatHerbivores();
+            Carnivore carnivore = AfricaWorld.CreatCarnivores();
 
         }
     }
