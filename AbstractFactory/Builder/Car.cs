@@ -21,6 +21,15 @@ namespace Builder
             get { return parts[key]; }
             set { parts[key] = value; }
         }
+
+        public void ToString()
+        {
+            Console.WriteLine("Vehicle Type: {0}", carType);
+            Console.WriteLine(" Frame : {0}", parts["frame"]);
+            Console.WriteLine(" Engine : {0}", parts["engine"]);
+            Console.WriteLine(" Wheels: {0}", parts["wheels"]);
+            Console.WriteLine(" Transmission : {0}", parts["transmission"]);
+        }
     }
 }
 //-----------------------------------------------------

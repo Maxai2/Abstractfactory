@@ -16,12 +16,19 @@ namespace Builder
 
             car = new UAZ();
             fabric.Construct(car);
+            car.Car.ToString();
 
             car = new Ford();
             fabric.Construct(car);
+            car.Car.ToString();
 
             car = new Daewoo();
             fabric.Construct(car);
+            car.Car.ToString();
+
+            car = new Hyundai();
+            fabric.Construct(car);
+            car.Car.ToString();
         }
     }
 }
