@@ -10,7 +10,18 @@ namespace Builder
     {
         static void Main(string[] args)
         {
+            CarBuilder car;
 
+            Fabric fabric = new Fabric();
+
+            car = new UAZ();
+            fabric.Construct(car);
+
+            car = new Ford();
+            fabric.Construct(car);
+
+            car = new Daewoo();
+            fabric.Construct(car);
         }
     }
 }
