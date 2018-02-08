@@ -44,14 +44,20 @@
   <ItemGroup>
     <Compile Include="Figure.cs" />
     <Compile Include="FigureBuilder.cs" />
+    <Compile Include="I_FigureBuilder.cs" />
     <Compile Include="I_Figure.cs" />
     <Compile Include="J_Figure.cs" />
+    <Compile Include="J_FigureBuilder.cs" />
     <Compile Include="L_Figure.cs" />
+    <Compile Include="L_FigureBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S_Figure.cs" />
+    <Compile Include="S_FigureBuilder.cs" />
     <Compile Include="T_Figure.cs" />
+    <Compile Include="T_FigureBuilder.cs" />
     <Compile Include="Z_Figure.cs" />
+    <Compile Include="Z_FigureBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

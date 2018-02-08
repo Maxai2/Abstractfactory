@@ -10,7 +10,12 @@ namespace FactoryMethod
     {
         public S_Figure()
         {
+            // 0, 153, 51
             figArr = new int[4, 4] { { 0, 1, 1, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+            Col.red = 0;
+            Col.green = 153;
+            Col.blue = 51;
+            name = "S";
         }
     }
 }

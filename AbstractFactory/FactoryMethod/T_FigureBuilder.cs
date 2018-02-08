@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 //---------------------------------------------------
 namespace FactoryMethod
 {
-    struct FigureCol
+    class T_FigureBuilder : FigureBuilder
     {
-        public byte red;
-        public byte green;
-        public byte blue;
-    }
-
-    abstract class Figure
-    {
-        public int[,] figArr;
-        public FigureCol Col;
-        public string name;
+        Figure FigureBuilder.Create() => new T_Figure();
     }
 }
 //---------------------------------------------------
