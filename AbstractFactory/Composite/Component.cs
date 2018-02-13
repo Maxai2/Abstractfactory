@@ -12,7 +12,11 @@ namespace Composite
 
         public double Size { get; set; }
 
-        public Component(string name) => this.name = name;
+        public Component(string name, double size)
+        {
+            this.name = name;
+            this.Size = size;
+        }
 
         public abstract void Add(Component c);
         public abstract void Remove(Component c);

@@ -9,53 +9,49 @@ namespace Composite
 {
     class Program
     {
-        static string[] GetFolder(string path) => Directory.GetDirectories(path);
+        static string[] GetFolders(string path) => Directory.GetDirectories(path);
 
-        static string[] GetFile(string path) => Directory.GetFiles(path);
+        static string[] GetFiles(string path) => Directory.GetFiles(path);
+
+
+        //MyDirectory directory = new MyDirectory(path.Substring(path.LastIndexOf('\\') + 1));
 
         static void Main(string[] args)
         {
             string path = "";
-            Console.Write("Input the path for calculate: ");
+            Console.Write("Input link: ");
             path = Console.ReadLine();
 
-            MyDirectory directory = new MyDirectory(path.Substring(path.LastIndexOf('\\') + 1));
+            MyDirectory file = new MyDirectory(path, path.Substring(path.LastIndexOf('\\') + 1), 0);
 
+            file.Display(0);
 
+            //Console.WriteLine($"Count: {GetFolders(path).Length + GetFiles(path).Length}");
 
-            directory.Display(0);
-            
-            
-            
-            
-            
-            //Console.WriteLine($"Count: {GetFolder(path).Length + GetFile(path).Length}");
-
-            //foreach (var item in GetFolder(path))
+            //foreach (var item in GetFolders(path))
             //{
             //    Console.WriteLine(item);
             //}
 
-            //foreach (var item in GetFile(path))
+            //foreach (var item in GetFiles(path))
             //{
             //    Console.WriteLine(item);
             //}
 
             //MyDirectory root = new MyDirectory("C");
 
-            //root.Add(new MyFile("File1"));
-            //root.Add(new MyFile("File2"));
-
-            //MyDirectory comp = new MyDirectory("Folder3");
-            //comp.Add(new MyFile("File3"));
-            //comp.Add(new MyFile("File4"));
+            //MyDirectory comp = new MyDirectory("Folder1");
+            //comp.Add(new MyFile("File1"));
+            //comp.Add(new MyFile("File2"));
             //root.Add(comp);
 
-            //root.Add(new MyFile("File5"));
+            //root.Add(new MyFile("File1"));
+            //root.Add(new MyFile("File2"));
+            //root.Add(new MyFile("File3"));
 
             //MyFile leaf = new MyFile("File5");
             //root.Add(leaf);
-            ////root.Remove(leaf);
+            //root.Remove(leaf);
 
             //root.Display(0);
         }

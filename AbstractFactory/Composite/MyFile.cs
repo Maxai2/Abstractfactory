@@ -8,13 +8,13 @@ namespace Composite
 {
     class MyFile : Component
     {
-        public MyFile(string name) : base(name) {}
+        public MyFile(string name, double size) : base(name, size) {}
 
         public override void Add(Component c) => throw new NotImplementedException();
 
         public override void Remove(Component c) => throw new NotImplementedException(); 
 
-        public override void Display(int depth) => Console.WriteLine(new String(' ', depth) + name); 
+        public override void Display(int depth) => Console.WriteLine(new String(' ', depth) + name + " size:" + Size); 
     }
 }
 //--------------------------------------------------
