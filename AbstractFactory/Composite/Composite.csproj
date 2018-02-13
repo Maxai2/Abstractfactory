@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Component.cs" />
-    <Compile Include="Directory.cs" />
-    <Compile Include="File.cs" />
+    <Compile Include="MyDirectory.cs" />
+    <Compile Include="MyFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
