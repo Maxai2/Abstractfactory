@@ -27,34 +27,34 @@ namespace Composite
             }
         }
 
-        void scanFile(MyDirectory dir, string path)
+        void scanFile(MyDirectory directory, string path)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(path);
             double size = 0;
-            MyDirectory directory = null;
+            MyDirectory NewDirectory = null;
 
             foreach (var item in directoryInfo.GetDirectories())
             {
                 if (item.Exists)
                 {
-                    directory = new MyDirectory(item.FullName, item.Name, 0);
-                    Add(directory);
+                    NewDirectory = new MyDirectory(item.FullName, item.Name, 0);
+                    Add(NewDirectory);
                 }
             }
 
             foreach (var item in directoryInfo.GetFiles())
             {
-                dir.Add(new MyFile(item.Name, item.Length));
+                directory.Add(new MyFile(item.Name, item.Length));
                 size += item.Length;
             }
 
-            if (directory != null)
+            if (NewDirectory != null)
             {
                 foreach (var item in list)
-                    dir.Size += item.Size;
+                    directory.Size += item.Size;
             }
             else
-                dir.Size = size;
+                directory.Size = size;
         }
     }
 }
