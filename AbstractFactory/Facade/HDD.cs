@@ -8,6 +8,11 @@ namespace Facade
 {
     class HDD
     {
+        public void Run() => Console.WriteLine("Run HDD");
+
+        public void Check() => Console.WriteLine("Check Boot Sector");
+
+        public void Stop() => Console.WriteLine("Stop HDD");
     }
 }
 //---------------------------------------------------

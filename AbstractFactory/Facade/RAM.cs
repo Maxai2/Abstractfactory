@@ -8,6 +8,11 @@ namespace Facade
 {
     class RAM
     {
+        public void Run() => Console.WriteLine("RAM energize");
+
+        public void Analise() => Console.WriteLine("RAM analise");
+
+        public void Clear() => Console.WriteLine("RAM clear");
     }
 }
 //---------------------------------------------------
