@@ -16,7 +16,7 @@ namespace Proxy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Translator());
+            Application.Run(new FormTranslator());
         }
     }
 }

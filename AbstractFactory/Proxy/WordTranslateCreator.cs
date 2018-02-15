@@ -5,14 +5,20 @@ using Newtonsoft.Json.Linq;
 //--------------------------------------
 namespace Proxy
 {
-    class WordTranslateCreator
+    static class WordTranslateCreator
     {
-        private Dictionary<string, string> dictionary = new Dictionary<string, string>();
+        private static Dictionary<string, string> dictionary = new Dictionary<string, string>();
 
-        
+        public static Dictionary<string, string> GetDictionary() => dictionary;
 
-        public string GetWord(string Rword)
+        public static string GetWord(string Rword)
         {
+            dictionary.Add("привет", "hello");
+            dictionary.Add("кошка", "cat");
+            dictionary.Add("собака", "dog");
+            dictionary.Add("слон", "elephant");
+            dictionary.Add("пока", "bye");
+
             string Eword = "";
 
             if (dictionary.ContainsKey(Rword))
@@ -21,10 +27,7 @@ namespace Proxy
             {
                 using (WebClient webClient = new WebClient())
                 {
-                    var uri = new Uri($@"https://translate.yandex.net/api/v1.5/tr.json/translate?lang=ru-en&key=trnsl.1.1.20180215T075947Z.541acd65df4bd709.eb8bd41e400f30b878ac4cfeae2a82dd55923be0&text=слон"); // &text=Hello%20World! &HTTP/1.1&text=
-                    //uri = uri.AddParameter("text", Rword);
-
-                    //var uriOrgin = uri.Query + Rword;
+                    var uri = new Uri($@"https://translate.yandex.net/api/v1.5/tr.json/translate?lang=ru-en&key=trnsl.1.1.20180215T075947Z.541acd65df4bd709.eb8bd41e400f30b878ac4cfeae2a82dd55923be0&text=" + Rword); 
 
                     var data = webClient.DownloadString(uri);
 

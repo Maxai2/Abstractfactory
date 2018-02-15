@@ -47,11 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Translator.cs">
+    <Compile Include="Proxy.cs" />
+    <Compile Include="FormTranslator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Translator.Designer.cs">
-      <DependentUpon>Translator.cs</DependentUpon>
+    <Compile Include="FormTranslator.Designer.cs">
+      <DependentUpon>FormTranslator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +66,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Translator.resx">
-      <DependentUpon>Translator.cs</DependentUpon>
+    <EmbeddedResource Include="FormTranslator.resx">
+      <DependentUpon>FormTranslator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

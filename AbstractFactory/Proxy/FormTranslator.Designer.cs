@@ -1,6 +1,6 @@
 ﻿namespace Proxy
 {
-    partial class Translator
+    partial class FormTranslator
     {
         /// <summary>
         /// Required designer variable.
@@ -92,6 +92,7 @@
             this.Name = "Translator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Translator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Translator_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
