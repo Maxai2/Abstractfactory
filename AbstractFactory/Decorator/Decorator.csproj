@@ -43,7 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archer.cs" />
-    <Compile Include="Decarator.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Decorator.cs" />
     <Compile Include="HorseMan.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="HumanWarrior.cs" />
@@ -53,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

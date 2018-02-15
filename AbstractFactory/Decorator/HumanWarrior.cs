@@ -8,6 +8,13 @@ namespace Decorator
 {
     class HumanWarrior
     {
+        public HumanWarrior(Character character)
+        {
+            if (character is Hum)
+            {
+
+            }
+        }
     }
 }
 //------------------------------------------------

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //------------------------------------------------
 namespace Decorator
 {
-    abstract class Human
+    abstract class Human : Character
     {
         public int MyProperty { get; set; }
     }
