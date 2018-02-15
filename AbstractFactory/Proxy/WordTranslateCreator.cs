@@ -22,7 +22,7 @@ namespace Proxy
                 using (WebClient webClient = new WebClient())
                 {
                     var uri = new Uri($@"https://translate.yandex.net/api/v1.5/tr.json/translate?lang=ru-en&key=trnsl.1.1.20180215T075947Z.541acd65df4bd709.eb8bd41e400f30b878ac4cfeae2a82dd55923be0&text=слон"); // &text=Hello%20World! &HTTP/1.1&text=
-                    uri = uri.AddParameter("text", Rword);
+                    //uri = uri.AddParameter("text", Rword);
 
                     //var uriOrgin = uri.Query + Rword;
 
