@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 //------------------------------------------------
 namespace Decorator
 {
-    class Archer : Character
+    class EvilMagician : Character
     {
-        public Archer(Character character)
+        public EvilMagician(Character character)
         {
-            if (character is HumanWarrior)
+            if (character is ElfMagician)
             {
-                character.Name = "Archer";
-                character.attack += 20;
+                character.Name = "Evil Magician";
+                character.attack += 70;
                 character.speed += 20;
-                character.health += 50;
-                character.armor += 10;
+                character.health += 0;
+                character.armor += 0;
             }
         }
     }

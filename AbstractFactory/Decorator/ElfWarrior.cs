@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 //------------------------------------------------
 namespace Decorator
 {
-    class HumanWarrior : Character
+    class ElfWarrior : Character
     {
-        public HumanWarrior(Character character)
+        public ElfWarrior(Character character)
         {
-            if (character is Human)
+            if (character is Elf)
             {
-                character.Name = "Human Warrior";
+                character.Name = "Elf Warrior";
                 character.attack += 20;
-                character.speed += 10;
-                character.health += 50;
+                character.speed -= 10;
+                character.health += 100;
                 character.armor += 20;
             }
         }

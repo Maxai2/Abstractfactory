@@ -15,10 +15,10 @@ namespace Decorator
         int Health;
         int Armor;
 
-        public override int armor { get => armor + Character.armor; set => base.armor = value; }
-        public override int attack { get => base.attack; set => base.attack = value; }
-        public override int health { get => base.health; set => base.health = value; }
-        public override int speed { get => base.speed; set => base.speed = value; }
+        public override int armor { get => armor + Character.armor; set => Character.armor = value; }
+        public override int attack { get => attack + Character.attack; set => Character.attack = value; }
+        public override int health { get => health + Character.health; set => Character.health = value; }
+        public override int speed { get => speed +  Character.speed; set => Character.speed = value; }
     }
 }
 //------------------------------------------------

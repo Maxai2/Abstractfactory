@@ -44,7 +44,13 @@
   <ItemGroup>
     <Compile Include="Archer.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CrossbowMan.cs" />
     <Compile Include="Decorator.cs" />
+    <Compile Include="Elf.cs" />
+    <Compile Include="ElfMagician.cs" />
+    <Compile Include="ElfWarrior.cs" />
+    <Compile Include="EvilMagician.cs" />
+    <Compile Include="GoodMagician.cs" />
     <Compile Include="HorseMan.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="HumanWarrior.cs" />

@@ -18,8 +18,6 @@ namespace Decorator
         public virtual int speed { get => Speed; set => Speed = value; }
         public virtual int health { get => Health; set => Health = value; }
         public virtual int armor { get => Armor; set => Armor = value; }
-
-        
     }
 }
 //------------------------------------------------
