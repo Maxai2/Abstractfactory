@@ -10,6 +10,10 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
+            HumanWarrior human;
+            human = new Decorator();
+
+            Character character = new Archer(human);
 
         }
     }
