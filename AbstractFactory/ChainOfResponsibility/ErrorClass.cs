@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //----------------------------------------------
 namespace ChainOfResponsibility
 {
-    class ErrorClass : Handler
+    class ErrorClass : Handler 
     {
         public override void Logging(int ErrorLvl, string ErrorText)
         {
