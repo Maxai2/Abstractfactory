@@ -8,13 +8,13 @@ namespace Decorator
 {
     class Elf : Character
     {
-        public Elf(Character character)
+        public Elf()
         {
-            character.Name = "Elf";
-            character.attack += 15;
-            character.speed += 30;
-            character.health += 100;
-            character.armor += 0;
+            Name = "Elf";
+            attack += 15;
+            speed += 30;
+            health += 100;
+            armor += 0;
         }
     }
 }

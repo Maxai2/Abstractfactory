@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 //----------------------------------------------
 namespace ChainOfResponsibility
-{ 
+{
     class Error111Class : Handler
     {
         public override void Logging(int ErrorLvl, string ErrorText)
@@ -26,10 +26,7 @@ namespace ChainOfResponsibility
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
 
-            if (ErrorLvl == 3)
-                smtp.Send(mail);
-            else
-                Successor.Logging(ErrorLvl, ErrorText);
+            smtp.Send(mail);
         }
     }
 }

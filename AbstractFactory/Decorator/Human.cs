@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 //------------------------------------------------
 namespace Decorator
 {
-    abstract class Human : Character
+    class Human : Character
     {
-        public Human(Character character)
+        public Human()
         {
-            character.Name = "Human";
-            character.attack += 20;
-            character.speed += 20;
-            character.health += 150;
-            character.armor += 0;
+            Name = "Human";
+            attack += 20;
+            speed += 20;
+            health += 150;
+            armor += 0;
         }
     }
 }

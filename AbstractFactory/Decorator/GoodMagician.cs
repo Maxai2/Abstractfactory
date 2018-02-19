@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //------------------------------------------------
 namespace Decorator
 {
-    class GoodMagician : Character
+    class GoodMagician : Decorator
     {
         public GoodMagician(Character character)
         {

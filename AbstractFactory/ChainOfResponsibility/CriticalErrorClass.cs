@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //----------------------------------------------
-namespace ChainOfResponsibility 
+namespace ChainOfResponsibility
 {
     class CriticalErrorClass : Handler
     {
@@ -13,28 +13,16 @@ namespace ChainOfResponsibility
         {
             string path = Directory.GetCurrentDirectory() + @"\Error.txt";
 
-            if (ErrorLvl == 2)
+            if (!File.Exists(path))
             {
-                if (!File.Exists(path))
-                {
-                    File.Create(path);
-                    File.WriteAllText(path, ErrorText);
-                }
-                else
-                    File.WriteAllText(path, ErrorText);
+                File.Create(path);
+                File.WriteAllText(path, ErrorText);
             }
             else
-            {
-                if (!File.Exists(path))
-                {
-                    File.Create(path);
-                    File.WriteAllText(path, ErrorText);
-                }
-                else
-                    File.WriteAllText(path, ErrorText);
+                File.WriteAllText(path, ErrorText);
 
+            if (ErrorLvl != 2)
                 Successor.Logging(ErrorLvl, ErrorText);
-            }
         }
     }
 }
