@@ -10,7 +10,7 @@ namespace ChainOfResponsibility
     abstract class Handler
     {
         public Handler Successor { get; set; }
-        public abstract void Logging(int ErrorLvl, string ErrorText);
+        public abstract void Logging(MyException exception);
     }
 }
 //----------------------------------------------

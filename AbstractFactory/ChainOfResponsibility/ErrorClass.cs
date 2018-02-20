@@ -8,12 +8,12 @@ namespace ChainOfResponsibility
 {
     class ErrorClass : Handler
     {
-        public override void Logging(int ErrorLvl, string ErrorText)
+        public override void Logging(MyException exception)
         {
-            Console.WriteLine(ErrorText);
+            Console.WriteLine(exception.Message);
 
-            if (ErrorLvl != 1)
-                Successor.Logging(ErrorLvl, ErrorText);
+            if (exception.error != Errors.Error)
+                Successor.Logging(exception);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace ChainOfResponsibility
 {
     class Error111Class : Handler
     {
-        public override void Logging(int ErrorLvl, string ErrorText)
+        public override void Logging(MyException exception)
         {
             MailAddress from = new MailAddress("ErrorMail@info.com", "ChainOfResponsibility");
 
@@ -20,7 +20,7 @@ namespace ChainOfResponsibility
 
             mail.Subject = "Error";
 
-            mail.Body = $"<h2>{ErrorText}</h2>";
+            mail.Body = $"<h2>{exception.Message}</h2>";
 
             mail.IsBodyHtml = true;
 

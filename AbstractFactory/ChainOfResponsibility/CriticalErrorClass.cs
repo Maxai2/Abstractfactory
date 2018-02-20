@@ -9,19 +9,19 @@ namespace ChainOfResponsibility
 {
     class CriticalErrorClass : Handler
     {
-        public override void Logging(int ErrorLvl, string ErrorText)
+        public override void Logging(MyException exception)
         {
             string path = "Error.txt";
 
             using (StreamWriter sw = new StreamWriter(path))
             {
-                sw.WriteLine(path, ErrorText);
+                sw.WriteLine(path, exception.Message);
             }
 
             Console.WriteLine($@"File Created: {Directory.GetCurrentDirectory()}\{path}");
 
-            if (ErrorLvl != 2)
-                Successor.Logging(ErrorLvl, ErrorText);
+            if (exception.error != Errors.CriticalError)
+                Successor.Logging(exception);
         }
     }
 }

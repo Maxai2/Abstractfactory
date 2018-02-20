@@ -17,7 +17,9 @@ namespace ChainOfResponsibility
             ErrorHandler.Successor = CErrorHandler;
             CErrorHandler.Successor = Error111Handler;
 
-            ErrorHandler.Logging(3, "Error");
+            MyException exception = new MyException("Error", Errors.CriticalError);
+
+            ErrorHandler.Logging(exception);
         }
     }
 }

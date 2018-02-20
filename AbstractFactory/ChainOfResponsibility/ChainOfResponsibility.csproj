@@ -45,6 +45,7 @@
     <Compile Include="Error111Class.cs" />
     <Compile Include="ErrorClass.cs" />
     <Compile Include="Handler.cs" />
+    <Compile Include="MyException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
