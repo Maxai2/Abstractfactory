@@ -12,11 +12,12 @@ namespace Decorator
         {
             if (character is ElfWarrior)
             {
-                character.Name = "Crossbowman";
-                character.attack += 20;
-                character.speed += 10;
-                character.health += 50;
-                character.armor -= 10;
+                Character = character;
+                Name = "Crossbowman";
+                attack += 20;
+                speed += 10;
+                health += 50;
+                armor -= 10;
             }
         }
     }

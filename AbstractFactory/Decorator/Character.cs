@@ -18,6 +18,11 @@ namespace Decorator
         public virtual int speed { get => Speed; set => Speed = value; }
         public virtual int health { get => Health; set => Health = value; }
         public virtual int armor { get => Armor; set => Armor = value; }
+
+        public void ShowStat()
+        {
+            Console.WriteLine($"Name: {Name}, Attack: {attack}, Speed: {speed}, Health: {health}, Armor: {armor}");
+        }
     }
 }
 //------------------------------------------------

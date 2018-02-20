@@ -12,11 +12,12 @@ namespace Decorator
         {
             if (character is HumanWarrior)
             {
-                character.Name = "Archer";
-                character.attack += 20;
-                character.speed += 20;
-                character.health += 50;
-                character.armor += 10;
+                Character = character;
+                Name = "Archer";
+                attack += 20;
+                speed += 20;
+                health += 50;
+                armor += 10;
             }
         }
     }

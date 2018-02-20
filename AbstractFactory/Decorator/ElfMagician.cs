@@ -12,11 +12,12 @@ namespace Decorator
         {
             if (character is Elf)
             {
-                character.Name = "Elf Magician";
-                character.attack += 10;
-                character.speed += 10;
-                character.health -= 50;
-                character.armor += 10;
+                Character = character;
+                Name = "Elf Magician";
+                attack += 10;
+                speed += 10;
+                health -= 50;
+                armor += 10;
             }
         }
     }

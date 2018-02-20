@@ -12,11 +12,12 @@ namespace Decorator
         {
             if (character is SwordMan)
             {
-                character.Name = "Horse Man";
-                character.attack -= 10;
-                character.speed += 40;
-                character.health += 200;
-                character.armor += 100;
+                Character = character;
+                Name = "Horse Man";
+                attack -= 10;
+                speed += 40;
+                health += 200;
+                armor += 100;
             }
         }
     }

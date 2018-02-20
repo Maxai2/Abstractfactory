@@ -10,9 +10,12 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
+            //Character human = new Human();
             Decorator decorator = new HorseMan(new SwordMan(new HumanWarrior(new Human())));
 
+            //Decorator decorator = new HumanWarrior(human);
             decorator.ShowStat();
+            //human.ShowStat();
         }
     }
 }

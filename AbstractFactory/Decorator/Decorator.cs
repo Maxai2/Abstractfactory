@@ -8,22 +8,17 @@ namespace Decorator
 {
     class Decorator : Character
     {
-        Character Character;
+        protected Character Character;
 
         int Attack;
         int Speed;
         int Health;
         int Armor;
 
-        public override int armor { get => armor + Character.armor; set => Character.armor = value; }
-        public override int attack { get => attack + Character.attack; set => Character.attack = value; }
-        public override int health { get => health + Character.health; set => Character.health = value; }
-        public override int speed { get => speed +  Character.speed; set => Character.speed = value; }
-
-        public void ShowStat()
-        {
-            Console.WriteLine($"Name: {Name}, Attack: {attack}, Speed: {speed}, Health: {health}, Armor: {armor}");
-        }
+        public override int armor { get => Armor + Character.armor; set => Armor = value; }
+        public override int attack { get => Attack + Character.attack; set => Attack = value; }
+        public override int health { get => Health + Character.health; set => Health = value; }
+        public override int speed { get => Speed +  Character.speed; set => Speed = value; }
     }
 }
 //------------------------------------------------
