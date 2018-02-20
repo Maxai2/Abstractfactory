@@ -17,7 +17,7 @@ namespace ChainOfResponsibility
             ErrorHandler.Successor = CErrorHandler;
             CErrorHandler.Successor = Error111Handler;
 
-
+            ErrorHandler.Logging(3, "Error");
         }
     }
 }

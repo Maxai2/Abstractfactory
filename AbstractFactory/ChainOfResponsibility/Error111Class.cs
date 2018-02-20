@@ -26,7 +26,11 @@ namespace ChainOfResponsibility
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
 
-            smtp.Send(mail);
+            smtp.EnableSsl = true;
+
+            //smtp.Send(mail);
+
+            Console.WriteLine("Mail Send in address: maxali946@gmail.com");
         }
     }
 }

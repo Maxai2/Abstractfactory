@@ -11,15 +11,14 @@ namespace ChainOfResponsibility
     {
         public override void Logging(int ErrorLvl, string ErrorText)
         {
-            string path = Directory.GetCurrentDirectory() + @"\Error.txt";
+            string path = "Error.txt";
 
-            if (!File.Exists(path))
+            using (StreamWriter sw = new StreamWriter(path))
             {
-                File.Create(path);
-                File.WriteAllText(path, ErrorText);
+                sw.WriteLine(path, ErrorText);
             }
-            else
-                File.WriteAllText(path, ErrorText);
+
+            Console.WriteLine($@"File Created: {Directory.GetCurrentDirectory()}\{path}");
 
             if (ErrorLvl != 2)
                 Successor.Logging(ErrorLvl, ErrorText);
