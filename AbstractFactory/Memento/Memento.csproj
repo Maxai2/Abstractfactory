@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoadHistory.cs" />
-    <Compile Include="TextClass.cs" />
     <Compile Include="TextMemento.cs" />
     <Compile Include="TextWork.cs">
       <SubType>Form</SubType>

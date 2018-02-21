@@ -8,11 +8,27 @@ namespace Memento
 {
     class LoadHistory
     {
-        public Stack<TextMemento> History { get; private set; }
-        public LoadHistory()
+        public List<TextMemento> History = new List<TextMemento>();
+
+        public int Selected { get; set; }
+
+        public LoadHistory() => Selected = -1;
+
+        public void Add(TextMemento memento)
         {
-            History = new Stack<TextMemento>();
+            History.Add(memento);
+            Selected++;
         }
+
+        public TextMemento this[int index]
+        {
+            get => History[index];
+        }
+
+        public TextMemento Undo() => History[Selected - 1];
+
+        public TextMemento Rendo() => History[Selected + 1];
+
     }
 }
 //-------------------------------------------------------------
