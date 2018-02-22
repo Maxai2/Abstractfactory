@@ -26,6 +26,9 @@ namespace Memento
 
         private void bLoad_Click(object sender, EventArgs e)
         {
+            if (load.History.Count == 0)
+                return;
+
             rTBWorkPlace.Text = load.History[load.Selected].Text;    
         }
 
@@ -64,6 +67,9 @@ namespace Memento
 
         private void bRendo_Click(object sender, EventArgs e)
         {
+            if (load.Rendo() == null)
+                return;
+
             TextMemento memento = load.Rendo();
             rTBWorkPlace.Text = memento.Text;
             rTBWorkPlace.SelectionStart = memento.CursorPosition;
@@ -71,6 +77,9 @@ namespace Memento
 
         private void bUndo_Click(object sender, EventArgs e)
         {
+            if (load.Undo() == null)
+                return;
+
             TextMemento memento = load.Undo();
             rTBWorkPlace.Text = memento.Text;
             rTBWorkPlace.SelectionStart = memento.CursorPosition;

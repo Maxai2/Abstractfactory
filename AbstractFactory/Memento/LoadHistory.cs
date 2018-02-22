@@ -27,6 +27,9 @@ namespace Memento
 
         public TextMemento Undo()
         {
+            if (History.Count == 0)
+                return null;
+
             if (Selected > 0)
             {
                 Selected--;
@@ -38,6 +41,9 @@ namespace Memento
 
         public TextMemento Rendo()
         {
+            if (History.Count == 0)
+                return null;
+
             if (Selected < History.Count - 1)
             {
                 Selected++;
