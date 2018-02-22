@@ -64,12 +64,16 @@ namespace Memento
 
         private void bRendo_Click(object sender, EventArgs e)
         {
-            load.Rendo();
+            TextMemento memento = load.Rendo();
+            rTBWorkPlace.Text = memento.Text;
+            rTBWorkPlace.SelectionStart = memento.CursorPosition;
         }
 
         private void bUndo_Click(object sender, EventArgs e)
         {
-            load.Undo();
+            TextMemento memento = load.Undo();
+            rTBWorkPlace.Text = memento.Text;
+            rTBWorkPlace.SelectionStart = memento.CursorPosition;
         }
     }
 }

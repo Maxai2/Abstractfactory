@@ -25,10 +25,27 @@ namespace Memento
             get => History[index];
         }
 
-        public TextMemento Undo() => History[Selected - 1];
+        public TextMemento Undo()
+        {
+            if (Selected > 0)
+            {
+                Selected--;
+                return History[Selected];
+            }
+            else
+                return History[Selected];
+        }
 
-        public TextMemento Rendo() => History[Selected + 1];
-
+        public TextMemento Rendo()
+        {
+            if (Selected < History.Count - 1)
+            {
+                Selected++;
+                return History[Selected];
+            }
+            else
+                return History[Selected];
+        }
     }
 }
 //-------------------------------------------------------------
